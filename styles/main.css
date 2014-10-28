@@ -1,0 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700);
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
