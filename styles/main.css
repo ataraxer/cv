@@ -1,13 +1,48 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,300);
 
+.wrapper {
+  width: 100%;
+}
 
 .content {
   margin: 0 auto;
   width: 720px;
 }
 
+.content h2 {
+  border-bottom: 1px solid #ddd;
+}
+
+.header {
+  text-align: center;
+  padding-top: 1em;
+}
+
+.header h1 {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.header h2 {
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  font-weight: 300;
+}
+
+h2, h3, h4, p {
+  margin-bottom: 0;
+}
 
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"] {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  color: #333;
 }
+
+
+
