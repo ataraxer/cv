@@ -1,12 +1,33 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700,400,300);
 
+body {
+  min-width: 320px;
+}
+
 .wrapper {
   width: 100%;
 }
 
 .content {
   margin: 0 auto;
-  width: 720px;
+  box-sizing: border-box;
+  padding: 0 1em;
+  min-width: 320px;
+  max-width: 80%;
+}
+
+@media screen and (min-width:80em) {
+  .content {
+    padding: 0;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width:48em) {
+  .date {
+    font-size: 1.2em;
+    font-weight: 300;
+  }
 }
 
 .content h2 {
@@ -50,6 +71,10 @@ html, button, input, select, textarea,
 
 .remark p,
 .remark a {
+  color: #999;
+}
+
+.gray {
   color: #999;
 }
 
