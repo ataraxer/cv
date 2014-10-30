@@ -13,20 +13,29 @@ body {
   box-sizing: border-box;
   padding: 0 1em;
   min-width: 320px;
-  max-width: 80%;
+  max-width: 90%;
+}
+
+@media
+screen and (max-width:47.9em),
+screen and (max-width:767px) {
+  .date {
+    font-size: 1.2em;
+    font-weight: 300;
+  }
+}
+
+@media screen and (min-width:64em) {
+  .content {
+    padding: 0;
+    max-width: 70%;
+  }
 }
 
 @media screen and (min-width:80em) {
   .content {
     padding: 0;
     max-width: 50%;
-  }
-}
-
-@media screen and (max-width:48em) {
-  .date {
-    font-size: 1.2em;
-    font-weight: 300;
   }
 }
 
