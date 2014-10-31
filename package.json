@@ -1,0 +1,27 @@
+{
+  "name": "ataraxer-cv",
+  "version": "0.1.0",
+  "description": "Curriculum Vitae of one Anton Karamanov.",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.8.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ataraxer/cv.git"
+  },
+  "keywords": [
+    "cv",
+    "curriculum",
+    "vitae",
+    "resume",
+    "software",
+    "engineer"
+  ],
+  "author": "Anton Karamanov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ataraxer/cv/issues"
+  },
+  "homepage": "https://github.com/ataraxer/cv"
+}
