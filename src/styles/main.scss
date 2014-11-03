@@ -8,13 +8,29 @@ body {
   width: 100%;
 }
 
+
 .content {
   margin: 0 auto;
   box-sizing: border-box;
   padding: 0 1em;
   min-width: 320px;
   max-width: 90%;
+
+  h2 {
+    border-bottom: 1px solid #ddd;
+  }
+
+  @media screen and (min-width:64em) {
+    padding: 0;
+    max-width: 70%;
+  }
+
+  @media screen and (min-width:80em) {
+    padding: 0;
+    max-width: 50%;
+  }
 }
+
 
 @media
 screen and (max-width:47.9em),
@@ -25,40 +41,24 @@ screen and (max-width:767px) {
   }
 }
 
-@media screen and (min-width:64em) {
-  .content {
-    padding: 0;
-    max-width: 70%;
-  }
-}
-
-@media screen and (min-width:80em) {
-  .content {
-    padding: 0;
-    max-width: 50%;
-  }
-}
-
-.content h2 {
-  border-bottom: 1px solid #ddd;
-}
 
 .header {
   text-align: center;
   padding-top: 1em;
+
+  h1 {
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+  }
+
+  h2 {
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+  }
 }
 
-.header h1 {
-  font-weight: 400;
-  margin: 0;
-  padding: 0;
-}
-
-.header h2 {
-  font-size: 1.2em;
-  margin: 0;
-  padding: 0;
-}
 
 h1, h2 {
   font-weight: 300;
@@ -68,23 +68,23 @@ h2, h3, h4, p {
   margin-bottom: 0;
 }
 
+
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"] {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   color: #333;
 }
 
+
 .remark {
   text-align: right;
+
+  p, a {
+    color: #999;
+  }
 }
 
-.remark p,
-.remark a {
-  color: #999;
-}
 
-.gray {
-  color: #999;
-}
+.gray { color: #999; }
 
 
