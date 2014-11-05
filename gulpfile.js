@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var minifyHTML = require('gulp-minify-html');
 var minifyCSS = require('gulp-minify-css');
-var sass = require('gulp-sass')
+var sass = require('gulp-sass');
 var assemble = require('gulp-assemble');
 var bower = require('gulp-bower');
 
@@ -19,7 +19,7 @@ var pureFiles = [
 
 
 
-gulp.task('default', ['build'])
+gulp.task('default', ['build']);
 
 gulp.task('build', function () {
   bower();
