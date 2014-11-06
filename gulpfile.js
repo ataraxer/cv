@@ -4,12 +4,23 @@ var minifyCSS = require('gulp-minify-css');
 var sass = require('gulp-sass');
 var assemble = require('gulp-assemble');
 var bower = require('gulp-bower');
+var rename = require('gulp-rename');
+var remarkable = require('gulp-remarkable');
+var clean = require('gulp-clean');
 
 var assembleOptions = {
   data: 'src/data.json',
-  partials: 'src/templates/partials/*.hbs',
+  partials: [
+    'src/templates/partials/*.hbs',
+    'tmp/templates/partials/*.hbs',
+  ],
   layout: 'src/templates/index.hbs',
-  helpers: 'src/templates/helpers.js'
+  helpers: 'src/templates/helpers.js',
+};
+
+var cleanOptions = {
+  read: false,
+  force: true,
 };
 
 var pureFiles = [
@@ -21,7 +32,8 @@ var pureFiles = [
 
 gulp.task('default', ['build']);
 
-gulp.task('build', function () {
+
+gulp.task('build', ['prepare'], function () {
   bower();
 
   gulp.src('src/styles/*.scss')
@@ -36,4 +48,22 @@ gulp.task('build', function () {
     .pipe(assemble(assembleOptions))
     .pipe(minifyHTML())
     .pipe(gulp.dest('build/'));
+
+  return gulp.src('tmp/', cleanOptions)
+    .pipe(clean());
 });
+
+
+gulp.task('prepare', ['clean'], function() {
+  return gulp.src('src/content/*.md')
+    .pipe(remarkable())
+    .pipe(rename({ extname: '.hbs' }))
+    .pipe(gulp.dest('tmp/templates/partials/'));
+});
+
+
+gulp.task('clean', function () {
+  return gulp.src(['build/', 'tmp/'], cleanOptions)
+    .pipe(clean());
+});
+
