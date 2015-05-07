@@ -29,13 +29,15 @@ var pureFiles = [
 ];
 
 
-
 gulp.task('default', ['build']);
 
 
-gulp.task('build', ['prepare'], function () {
-  bower();
+gulp.task('bower', function () {
+  return bower();
+});
 
+
+gulp.task('build', ['bower', 'prepare'], function () {
   gulp.src('src/styles/*.scss')
     .pipe(sass())
     .pipe(minifyCSS())
