@@ -1,0 +1,5 @@
+Currently I'm working on LogBroker project – large distributed system based on Apache Kafka. LogBroker serves as a centralized data bus, which controls internal company's data flow, reaching hundreds of Terabytes of throughput on a daily basis. It aggregates data from servers across the company, preprocesses it to unify format and delivers to the processing endpoints such as MapReduce clusters for batch processing or real-time log analytics systems, while ensuring lack of data loss and duplication (exactly once delivery semantics).
+
+LogBroker is being successfuly used in production environment for over a year and gradually replaces old data flow infrastructure. 85% of data travels end-to-end from server of origin to processing endpoint in less then 3 seconds with goal towards reaching 99% mark.
+
+In the course of development I've had expirience with Scala programming language, Akka and Spray frameworks, Apache Kafka and ZooKeeper projects. I've also learned a lot about building fault-tolerant systems and distibuted service architecture.
