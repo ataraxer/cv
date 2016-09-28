@@ -1,7 +1,16 @@
 {
 	"experience": [
 		{
-			"date": { "from": 2013, "to": "Now" },
+			"date": { "from": 2015, "to": "Now" },
+			"text": "yandex-middle",
+			"position": {
+				"name": "Software Developer",
+				"company": "Yandex",
+				"link": "http://company.yandex.ru",
+				"location": "Moscow"
+			}
+		}, {
+			"date": { "from": 2013, "to": 2015 },
 			"text": "yandex-junior",
 			"position": {
 				"name": "Junior Software Developer",
