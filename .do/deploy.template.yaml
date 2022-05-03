@@ -1,0 +1,9 @@
+spec:
+  name: anton-karamanov-cv
+  services:
+  - build_command: npm run build
+    environment_slug: node-js
+    git:
+      branch: master
+      repo_clone_url: https://github.com/ataraxer/cv.git
+    name: anton-karamanov-cv
